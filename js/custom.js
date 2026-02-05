@@ -80,24 +80,24 @@ $(document).ready(function () {
     });
 
     // artwork - popup
-    $(function(){
-		$('#popup01').click(function(){
-			$('#pop01').show();
-		});
-		$('#popup02').click(function(){
-			$('#pop02').show();
-		});
-		$('#popup03').click(function(){
-			$('#pop03').show();
-		});
-		$('#popup04').click(function(){
-			$('#pop04').show();
-		});
+    $(function () {
+        $('#popup01').click(function () {
+            $('#pop01').show();
+        });
+        $('#popup02').click(function () {
+            $('#pop02').show();
+        });
+        $('#popup03').click(function () {
+            $('#pop03').show();
+        });
+        $('#popup04').click(function () {
+            $('#pop04').show();
+        });
 
-		$('.popup i').click(function(){
-			$('.popup').hide();
-		});
-	});
+        $('.popup i').click(function () {
+            $('.popup').hide();
+        });
+    });
 
     // popup-slide
     var swiper1 = new Swiper('.artwork1', {
@@ -145,4 +145,15 @@ $(document).ready(function () {
             }
         });
     });
+});
+
+
+
+// 스와이퍼 커서
+$(document).on('mouseenter', '.swiper-container', function () {
+    $(this).css('cursor', 'url(../img/swiper.png) 10 10, auto');
+});
+
+$(document).on('mouseleave', '.swiper-container', function () {
+    $(this).css('cursor', '');
 });
